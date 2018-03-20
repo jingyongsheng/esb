@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.zcbl</groupId>
+	<artifactId>esb</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- 设定主仓库，按设定顺序进行查找。 -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>project-snapshot</id>
+			<name>Porject Snapshot</name>
+			<url>http://192.168.1.150:9091/nexus/content/repositories/snapshots</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+		<repository>
+			<id>project-release</id>
+			<name>Porject Release</name>
+			<url>http://192.168.1.150:9091/nexus/content/repositories/releases</url>
+		</repository>
+	</distributionManagement>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<ehcache.version>2.6.9</ehcache.version>
+		<freemarker.version>2.3.20</freemarker.version>
+		<redis-client.version>2.7.2</redis-client.version>
+		<mybatis.version>1.1.1</mybatis.version>
+		<druid.version>1.0.28</druid.version>
+		<mysql.driver.version>5.1.30</mysql.driver.version>
+		<package.environment>local</package.environment>
+	</properties>
+	<dependencies>
+		<!-- necklace begin -->
+		<dependency>
+			<groupId>com.zcbl</groupId>
+			<artifactId>necklace</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- CACHE end -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
+		</dependency>
+		<!-- http Client -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.1</version>
+		</dependency>
+		<!-- rpc -->
+			<dependency>
+			<groupId>com.zcbl</groupId>
+			<artifactId>malaka</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+		<!-- json -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		<!-- dom4j -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6</version>
+		</dependency>
+	</dependencies>
+</project>
